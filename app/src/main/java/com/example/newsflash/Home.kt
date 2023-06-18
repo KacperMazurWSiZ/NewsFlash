@@ -54,14 +54,27 @@ class Home : Fragment(), OnNewsClick {
                     val newsArray = ArrayList<News>()
                     for (i in 0 until newsJsonArray.length()) {
                         val newsJsonObject = newsJsonArray.getJSONObject(i)
-                        val news = News(
-                            newsJsonObject.getString("title"),
-                            newsJsonObject.getString("author"),
-                            newsJsonObject.getString("url"),
-                            newsJsonObject.getString("urlToImage")
-                        )
-                        newsArray.add(news)
+                        val author = newsJsonObject.getString("author")
+                        if (author == "null") {
+                            val news = News(
+                                newsJsonObject.getString("title"),
+                                "Author: Unknown",
+                                newsJsonObject.getString("url"),
+                                newsJsonObject.getString("urlToImage")
+                            )
+                            newsArray.add(news)
+                        }
+                        else {
+                            val news = News(
+                                newsJsonObject.getString("title"),
+                                author,
+                                newsJsonObject.getString("url"),
+                                newsJsonObject.getString("urlToImage")
+                            )
+                            newsArray.add(news)
+                        }
                     }
+
                     mAdaptor.updateData(newsArray)
                 } catch (e: JSONException) {
                     e.printStackTrace()
