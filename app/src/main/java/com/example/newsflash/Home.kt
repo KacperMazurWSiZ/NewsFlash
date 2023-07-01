@@ -40,12 +40,36 @@ class Home : Fragment(), OnNewsClick {
         mAdaptor = NewsAdaptor(this)
         recyclerView.adapter = mAdaptor
 
-        fetchnews()
+        binding.btnEverything.setOnClickListener {
+            fetchnews("https://saurav.tech/NewsAPI/everything/cnn.json")
+        }
+        binding.btnSport.setOnClickListener {
+            fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json")
+        }
+        binding.btnBusiness.setOnClickListener {
+            fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/business/in.json")
+        }
+        binding.btnEntertainment.setOnClickListener{
+            fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/entertainment/in.json")
+        }
+        binding.btnGeneral.setOnClickListener{
+            fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/general/in.json")
+        }
+        binding.btnHealth.setOnClickListener{
+            fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/health/in.json")
+        }
+        binding.btnScience.setOnClickListener{
+            fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/science/in.json")
+        }
+        binding.btnTehnology.setOnClickListener{
+            fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json")
+        }
+
+        fetchnews("https://saurav.tech/NewsAPI/everything/cnn.json")
     }
 
-    private fun fetchnews() {
+    private fun fetchnews(url: String) {
         val queue = Volley.newRequestQueue(requireContext())
-        val url = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null,
             Response.Listener { response ->
