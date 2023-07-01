@@ -4,10 +4,13 @@
     <item android:title="News"
         android:id="@+id/home"
         android:icon="@drawable/baseline_newspaper_24"/>
-    <item android:title="Profile"
+    <item android:title="Tasks"
         android:id="@+id/profile"
-        android:icon="@drawable/ic_baseline_person_24"/>
+        android:icon="@drawable/baseline_checklist_24"/>
     <item android:title="Contact"
         android:id="@+id/settings"
         android:icon="@drawable/baseline_mail_outline_24"/>
+    <item android:title="Calendar"
+        android:id="@+id/calendar"
+        android:icon="@drawable/baseline_calendar_month_24"/>
 </menu>

@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(Home.newInstance())
                 R.id.profile -> replaceFragment(Profile())
                 R.id.settings -> replaceFragment(Contact())
+                R.id.calendar -> replaceFragment(Calendar())
             }
             true
         }
