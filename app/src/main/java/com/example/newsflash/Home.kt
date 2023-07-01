@@ -41,7 +41,7 @@ class Home : Fragment(), OnNewsClick {
         recyclerView.adapter = mAdaptor
 
         binding.btnEverything.setOnClickListener {
-            fetchnews("https://saurav.tech/NewsAPI/everything/cnn.json")
+            fetchnews("https://saurav.tech/NewsAPI/everything/bbc-news.json")
         }
         binding.btnSport.setOnClickListener {
             fetchnews("https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json")
