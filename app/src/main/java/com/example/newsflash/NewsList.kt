@@ -13,21 +13,21 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.example.newsflash.databinding.FragmentHomeBinding
+import com.example.newsflash.databinding.FragmentNewslistBinding
 import org.json.JSONException
 
-class Home : Fragment(), OnNewsClick {
+class NewsList : Fragment(), OnNewsClick {
 
 
 
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentNewslistBinding
     private lateinit var mAdaptor: NewsAdaptor
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentNewslistBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -112,8 +112,8 @@ class Home : Fragment(), OnNewsClick {
     }
 
     companion object {
-        fun newInstance(): Home {
-            return Home()
+        fun newInstance(): NewsList {
+            return NewsList()
         }
     }
 

@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class Profile : Fragment() {
+class Tasks : Fragment() {
 
     private lateinit var todoList: RecyclerView
     private lateinit var todoAdapter: TodoAdapter
@@ -25,7 +25,7 @@ class Profile : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_tasks, container, false)
 
         // Find RecyclerView in the layout
         todoList = view.findViewById(R.id.todoList)

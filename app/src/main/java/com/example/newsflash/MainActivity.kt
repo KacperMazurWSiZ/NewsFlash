@@ -14,12 +14,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(Home.newInstance())
+        replaceFragment(NewsList.newInstance())
 
         binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.home -> replaceFragment(Home.newInstance())
-                R.id.profile -> replaceFragment(Profile())
+                R.id.home -> replaceFragment(NewsList.newInstance())
+                R.id.profile -> replaceFragment(Tasks())
                 R.id.settings -> replaceFragment(Contact())
                 R.id.calendar -> replaceFragment(Calendar())
             }
