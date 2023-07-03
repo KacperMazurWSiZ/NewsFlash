@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">NewsFlash</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_everything">Everything</string>
+    <string name="category_sport">Sport</string>
+    <string name="category_business">Business</string>
+    <string name="category_entertainment">Entertainment</string>
+    <string name="category_general">General</string>
+    <string name="category_health">Health</string>
+    <string name="category_science">Science</string>
+    <string name="category_tehnology">Tehnology</string>
+    <string name="menu_news">News</string>
+    <string name="menu_tasks">Tasks</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_calendar">Calendar</string>
+    <string name="placeholder_tasks">Enter task</string>
+    <string name="add_button">ADD</string>
+    <string name="contact_title">Send News</string>
+    <string name="placeholder_name">Your Name</string>
+    <string name="placeholder_email">Your Email</string>
+    <string name="placeholder_message">Your Message</string>
+    <string name="upload_image_button">UPLOAD IMAGE</string>
+    <string name="send_news_button">SEND NEWS</string>
+    <string name="delete_button">DELETE</string>
+    <string name="news_image">NEWS IMAGE</string>
 </resources>
