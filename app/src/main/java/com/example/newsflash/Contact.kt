@@ -40,24 +40,24 @@ class Contact : Fragment() {
             val message = editTextMessage.text.toString()
 
             if (name.isEmpty() || email.isEmpty() || message.isEmpty()) {
-                // Przynajmniej jedno z pól jest puste, wyświetl komunikat błędu
+
                 Toast.makeText(requireContext(), "Wypełnij wszystkie pola", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Sprawdź poprawność adresu e-mail
+
             if (!isValidEmail(email)) {
                 Toast.makeText(requireContext(), "Nieprawidłowy adres e-mail", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Twórz intencję wysyłki e-maila i tak dalej...
+
             val intent = Intent(Intent.ACTION_SENDTO)
             intent.data = Uri.parse("mailto:generator.frajdy1@o2.pl")
             intent.putExtra(Intent.EXTRA_SUBJECT, "Contact Form Submission")
             intent.putExtra(Intent.EXTRA_TEXT, "Name: $name\nEmail: $email\nMessage: $message")
 
-            // Attach the image if available
+
             selectedImageUri?.let { imageUri ->
                 intent.putExtra(Intent.EXTRA_STREAM, imageUri)
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
